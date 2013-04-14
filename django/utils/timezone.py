@@ -250,6 +250,12 @@ def now():
     else:
         return datetime.now()
 
+def today():
+    """
+    Returns an aware or naive datetime.date, depending on settings.USE_TZ.
+    """
+    return now().date()
+
 # By design, these four functions don't perform any checks on their arguments.
 # The caller should ensure that they don't receive an invalid value like None.
 
